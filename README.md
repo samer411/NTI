@@ -14,5 +14,5 @@ This repository reflects my approach to learning by building, with an emphasis o
 ## NTI
 
 <p align="center">
-  <img src="https://www.google.com/imgres?q=nti&imgurl=https%3A%2F%2Fwww.nti.sci.eg%2Fimages%2Flogo.png&imgrefurl=https%3A%2F%2Fwww.nti.sci.eg%2F&docid=ZITMWF-N8_MFoM&tbnid=RRdM866obAHKTM&vet=12ahUKEwjYnajwzJiUAxWHgP0HHYgwD8IQnPAOegQIHBAB..i&w=960&h=464&hcb=2&ved=2ahUKEwjYnajwzJiUAxWHgP0HHYgwD8IQnPAOegQIHBAB" alt="NTI" width="500"/>
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxAEEcd5GGx80otg8qj_IHSuXrA1Er37ZvBg&s" alt="NTI" width="500"/>
 </p>
