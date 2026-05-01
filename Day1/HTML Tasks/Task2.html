@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header align="center">
+        <h1>Student Profile</h1>
+        <h3>Welcome To The Student information Page.</h3>
+        <hr width="1200">
+    </header>
+    <!-- PERSONAL INFORMATION -->
+    <section>
+        <h2>Personal Information</h2>
+        <table border="3" width="70%">
+            <tr>
+                <th>Name</th>
+                <td>Samer Nassim</td>
+            </tr>
+            <tr>
+                <th>Age</th>
+                <td>23</td>
+            </tr>
+            <tr>
+                <th>Faculty</th>
+                <td>Computers and Information Science</td>
+            </tr>
+            <tr>
+                <th>University</th>
+                <td>Mansoura University</td>
+            </tr>
+        </table>
+        <hr width="1200">
+    </section>
+    <section>
+        <h2>Subjects</h2>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+            <li>React</li>
+        </ul>
+        <hr width="1200">
+    </section>
+    <section>
+        <h2>Grades</h2>
+        <table border="3" width="70%">
+            <tr>
+                <th>Subject</th>
+                <th>Grade</th>
+            </tr>
+            <tr>
+                <td>HTML</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>CSS</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>JAVASCRIPT</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>REACT</td>
+                <td>100</td>
+            </tr>
+        </table>
+        <hr width="1200">
+    </section>
+    <!-- CONTACT ME -->
+    <section>
+        <h2>Contact student</h2>
+        <form  action="">
+            <label for="Name">Your Name</label>
+            <br>
+            <input type="text" name="Name" placeholder="Enter your name">
+            <br>
+            <label for="Email">Your Email</label>
+            <br>
+            <input type="email" name="Email" placeholder="Enter your Email">
+            <br>
+          <label for="dept">Select Department</label>
+            <br>
+            <select width="200px"sname="dept" >
+                <option value="cs">CS</option>
+                <option value="is">IS</option>
+                <option value="it">IT</option>
+            </select>
+            <br>
+            <div>
+                <label for="dept">Select Year</label>
+            <br>
+            <input type="number" name="year" placeholder="Select Year" min="2024" max="2028">
+            </div>
+          
+            <br>
+            <p>Gender</p>
+            <input type="radio" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" name="gender" value="female">
+            <label for="female">Female</label>
+            <br>
+            <p>Skills</p>
+            <input type="radio" name="skills" value="html">
+            <label for="html">HTML</label>
+            <input type="radio" name="skills" value="css">
+            <label for="css">CSS</label>
+            <input type="radio" name="skills" value="js">
+            <label for="js">JS</label>
+            <br>
+            <label for="Message">Message:</label>
+            <br>
+            <textarea name="Message" placeholder="Write your Message" cols="50" rows="10"></textarea>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+        <hr width="1200">
+    </section>
+    <!-- FOOTER -->
+    <footer align="center">
+        &copy; 2026 NTI. All Rights Reserved.
+    </footer>
+</body>
+
+</html>
