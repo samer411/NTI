@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <style>
+   .container{
+    border:2px solid black;
+    width:1000px;
+    height:650px;
+    margin:10px auto;
+    text-align: center;
+   }
+   .left,.right{
+    border:2px solid black ;
+    width:400px;
+    height:550px;
+    /* display:inline-block; */
+   }
+   .left{
+    background-color: cyan;
+    float:left
+   }
+   .right{
+    background: pink;
+    float:right
+
+   }
+   .foo{
+    clear:both;
+    border:2px solid red;
+    width:90%;
+    height:80px;
+    background: blueviolet;
+   }
+   </style>
+</head>
+<body>
+    <section class="container">
+        <article class="left"></article>
+        <aside class="right"></aside>
+        <footer class="foo"></footer>
+    </section>
+</body>
+</html>

@@ -1,0 +1,57 @@
+CSS
+static Web Page
+style html
+
+problems in html 
+1- redundancy 
+<p align="right">NTI </p>
+<p align="center">NTI </p>
+<p align="center">NTI </p>
+<p align="center">NTI </p>
+
+2- maintability 
+3- center image | font size > 7 | border image 
+4- mixing between data and design 
+
+****************************
+where to write css 
+1- external file 
+2- internal style <head></style>
+3- inline style attr style=""
+
+
+**********************************
+css rule 
+selector {
+    prop:value ;
+
+}
+
+CSS selectors 
+TagName Selector 
+ID selector 
+Class Selector 
+Grouping Selector 
+Attribute Selector 
+Sibiling Selector 
+Child Selector 
+Universal Selector 
+Structure Selector 
+  - nthchuild
+first child 
+last child 
+Pesudeo Class Selector 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
