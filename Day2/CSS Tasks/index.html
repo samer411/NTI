@@ -8,23 +8,66 @@
 </head>
 <body>
     <header>
-        <ul>
-            <li><img src="images/logo.png" alt="logo"></li>
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="about.html">ABOUT</a></li>
-            <li><a href="product.html">PRODUCT</a></li>
-            <li><a href="blog.html">BLOG</a></li>
-            <li><a href="contact">CONTACT</a></li>
+        <nav>
+            <ul class="nav">
+            <li class="nav_item"><img src="images/logo.png" alt="logo"></li>
+            <li class="nav_item"><a href="index.html">HOME</a></li>
+            <ul class="first_hover nav_item">
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="product.html">PRODUCT</a></li>
+            </ul>
+            <ul class="nav_item second_hover">
+                <li><a href="blog.html">BLOG</a></li>
+                <li><a href="first_post.html">FIRST POST</a></li>
+            </ul>
+            <li class="nav_item"><a href="contact">CONTACT</a></li>
         </ul>
+        </nav>
+        
     </header>
     <main>
         <section class="first">
             <div class="circle">
-                <div class="purple"></div>
-                <div class="red">FREEZE DELIGHT</div>
-                <div class="yellow"></div>
+                <p>FREEZE<br> DELIGHT</p>
+            </div>
+        </section>
+        <section class="second">
+            <div class="text">
+                <h2>NEW PRODUCT</h2>
+                <h1>The Twist of Healthy Yogurt</h1>
+                <p>This is Samer Nassim</p>
+            </div>
+            <div class="image">
+                <img src="../CSS Tasks/images/yogurt.jpg" alt="">
+            </div>
+        </section>
+        <section class="third">
+            <div>
+                <img src="../CSS Tasks/images/cupcake.png" alt="cupcake">
+                <p>PRODUCTS</p>
+            </div>
+            <div>
+                <img src="../CSS Tasks/images/charity.png" alt="charity">
+                <p>OUR STORE</p>
+            </div>
+            <div>
+                <img src="../CSS Tasks/images/pear.png" alt="pear">
+                <p>FLAVORS</p>
+            </div>
+            <div>
+                <img src="../CSS Tasks/images/location.png" alt="location">
+                <p>OUR LOCATION</p>
             </div>
         </section>
     </main>
+    <footer>
+        <div class="logos">
+            <img src="../CSS Tasks/images/facebook-app-symbol.png" alt="facebook">
+            <img src="../CSS Tasks/images/google-plus.png" alt="google">
+            <img src="../CSS Tasks/images/twitter.png" alt="twitter">
+            <img src="../CSS Tasks/images/pinterest-logo.png" alt="pinterest">
+        </div>
+        <p>&copy; Samer Nassim. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
