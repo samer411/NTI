@@ -1,0 +1,64 @@
+RWD 
+
+Meta Tag 
+percent Width 
+Media Query 
+
+display flexbox   | Grid >> CSS Framework >> Bootstrap 
+
+Media Query 
+
+know device which open Lay out 
+
+portarite >> small devices 
+ landscape  lap top , tablet 
+
+max-width:600px 
+
+@media all and (oreientation:landscape) {
+
+ css code 
+
+}
+@media all and (oreientation:portraite ) {
+
+ css code 
+
+}
+@media all and (max-width:600px) {
+
+ css code 
+
+}
+
+@media all and (min-width:200px)and(max-width:600px) {
+
+ css code 
+
+}
+
+
+//////////////////////////////////
+Flex 
+
+RWD 
+one dimention >> flex 
+
+nav header footer 
+
+problems >>> inline-block , float 
+//////////////////////
+
+Grid 
+2D
+ col , row 
+
+
+
+
+
+
+
+
+
+

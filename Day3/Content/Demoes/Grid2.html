@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container{
+            border:2px solid black ;
+            width:90%;
+            height:650px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr ;
+            grid-template-areas: "nav nav nav nav" 
+            "content content content aside"
+            "footer footer footer footer"
+            ;
+        
+
+        }
+        .item{
+            border:2px solid black ;
+            padding:25px;
+
+            
+        }
+        .nav{
+            background: magenta; 
+            font:bold 20px tahoma;
+            grid-area:nav;
+            
+        
+        }
+        .content{
+            background: cyan;
+            font:bold 20px tahoma;
+             grid-area:content;
+          
+        }
+
+        .aside{
+            background: lightcoral;
+            font:bold 20px tahoma;
+             grid-area:aside;
+
+        }
+
+        .footer{
+            background: gray;
+            font:bold 20px tahoma;
+             grid-area:footer;
+         
+        }
+        
+           
+        @media all and (max-width:600px) {
+            
+             .container{
+          
+            display: grid;
+            grid-template-columns: 1fr  ;
+            grid-template-areas: "nav " 
+            "content"
+            "aside"
+            "footer";
+        }
+        }
+     
+        
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="item nav">Header</nav>
+        <article class="item content">content</article>
+        <aside class="item aside">sideBar</aside>
+        <footer class="item footer">copt rights Reserved</footer>
+  
+    </div>
+</body>
+</html>
