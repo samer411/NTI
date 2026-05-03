@@ -6,7 +6,6 @@
 header{
     width:100%;
     background-color: rgb(233, 232, 232);
-    position: fixed;
     z-index: 2;
 }
 header .nav {
@@ -132,6 +131,7 @@ main .third div img{
 footer{
     background-color: #c11d49;
     height:300px;
+    clear:both;
 }
 footer div{
     padding:30px;
