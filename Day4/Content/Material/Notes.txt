@@ -1,0 +1,42 @@
+Case Sensetive language 
+Var A != a
+Name name 
+;  end each line 
+
+interpreter 
+
+loosely type language 
+
+var x =true
+x=100;
+
+- cross platform Langauge 
+
+- not st6andalone Langae 
+Embeding lang 
+
+// 
+/*
+
+*/
+
+
+
+var 
+function  for if while switch 
+name 
+
+var _if  if4  f  if_success $if 
+
+
+
+
+
+
+
+
+
+
+
+
+
