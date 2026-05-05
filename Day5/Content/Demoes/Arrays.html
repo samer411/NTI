@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+</head>
+<body>
+    <script>
+        /// Arrays 
+        let arr=new Array();
+        arr=[]; // empty Array 
+//        // arr=[10,20,100,2.5,"",true , null ,, ""] // losely type 
+//     arr[0]=100
+//     arr[1]=20
+//     arr[2]=35
+//     arr[45]=140
+//     arr[99]=15
+//     // spars Array
+//     for (let index = 0; index < arr.length; index++) {
+//         console.log(arr[ [index]])
+        
+//     }
+//    console.log("********************")
+//       // in operator check if index has value or not check spars Array
+
+//       for(i in arr){
+//         console.log(arr[i])
+//       }
+
+//    console.log("********************")
+//    for(i of arr){
+//     console.log(i)
+//    }
+
+
+ arr=[20,5,14,100,28,75,200,81]
+ arr.push(29,44)// add one or more to end of arr and return new length
+ arr.pop()
+ arr.unshift(55,66)// add one or more to start of arr and return new length
+  //delete
+  arr.shift()
+  arr.includes(111)
+arr.join()//'20,5,14,100,28,75,200,81,29'
+arr.join("+")//'66+20+5+14+100+28+75+200+81+29'
+//eval("alert('hi')")
+eval(arr.join("+"))
+arr.reverse()
+
+// static Methods
+Array.of(2,4,10)
+Array.from("abdallah")
+
+////////////////// 
+//callback function 
+   function greet(_name,callback){
+
+    console.log("hi "+ _name )
+     callback()
+   }
+
+  // greet("ali",()=>{console.log("byeeeee")})
+
+  //arr.forEach(function(elm,indx){ console.log(`elm : ${elm}  index=${indx}`)})
+//    arr.forEach((elm)=>{ console.log(`elm : ${elm} `)})
+
+//    arr.map((elm)=>{ console.log(`doub elm : ${elm*2} `)})
+
+//    let res=arr.filter(function(elm){
+//       if(elm>50){
+//         return elm ;
+//       }
+//    })
+
+//  let res=arr.filter(function(elm){
+//     //   if(elm>50){
+//     //     return elm ;
+//     //   }
+//     return elm>50;
+//    })
+
+//     let res=arr.filter((elm)=>{
+//    return elm>50;
+//    })
+
+
+// sort   [29, 81, 200, 75, 28, 100, 14, 5, 20, 66]
+console.log(arr)
+//  arr.sort(function(a,b){
+
+//      if(a>b)
+//      return 1;
+//     else if(a<b)
+//     return -1
+// else 
+//    return 0;
+
+//  })
+
+ arr.sort((a,b)=>{
+   return a-b;
+ })
+ arr.sort((a,b)=>{
+   return b-a;
+ })
+console.log(arr)
+
+
+    </script>
+</body>
+</html>

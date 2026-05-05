@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        Math.max(10,5,100,24)
+        Math.min(10,5,100,24)
+        Math.max([10,5,100,24])
+            //     Math.max(...[10,5,100,24])// spread 
+
+
+            //     function dothing(num1,nums){
+            //     // console.log(nums)
+            //     console.log(Math.max(...nums))
+
+            //     }
+            //    // dothing(10,20)
+            //    dothing(10,[20,5,4])
+
+               //////rest
+                   function dothing(num1,...nums){
+                   console.log(eval(nums.join("+")))
+
+                }
+               // dothing(10,20)
+               dothing(10,100,20,400)
+
+               arr=[20,5]
+               arr2=[42,50]
+            //    arr3= arr.concat(arr2)
+            arr3=[...arr,...arr2]
+            arr4=[...arr3]
+
+            /////// destruction 
+           
+          let [a,,...c] = [20,40,60,100,50]
+
+
+
+
+
+    </script>
+</body>
+</html>
