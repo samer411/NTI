@@ -3,9 +3,13 @@ var old_words = text.split(" ");
 var words=[];
 for(var i=0;i<old_words.length;i++){
     console.log(old_words[i][0]);
-    if(isNaN(parseInt(old_words[i][0]))!==false){
-        words.push(old_words[i])
+    var new_word = "";
+    for(var k=0;k<old_words[i].length;k++){
+        if(isNaN(parseInt(old_words[i][k]))){
+            new_word+=old_words[i][k];
+        }
     }
+    words.push(new_word)
 }
 console.log(words)
 if(isNaN(text) && text.trim()!==""){
