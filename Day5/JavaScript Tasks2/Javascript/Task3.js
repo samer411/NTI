@@ -18,7 +18,7 @@ function My_Chunk(my_arr,num_of_arrays){
 
 }
 
-console.log(My_Chunk(arr,3))
+console.log(My_Chunk(arr,4))
 // for(let i=0;i<arr.length;i+num_of_elements){
 //     // console.log(i)
 //     for(let j=i;j<i+num_of_elements;j++){
