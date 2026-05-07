@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<style>
+    body{
+        margin:0;
+        padding:0;
+    }
+    header h1{
+        color:white;
+        background-color: #333;
+        padding:20px;
+        text-align: center;
+    }
+    
+</style>
+<body>
+    <header>
+        <h1>
+            Task3
+        </h1>
+    </header>
+    <form onsubmit="return false;" name="login_form">
+        
+                <label for="username">UserName</label>
+                <input type="text" name="username" id="" placeholder="Username">
+                <label for="passowrd">Password</label>
+                <input type="password" name="password" id=""placeholder="Password">
+                <button onclick="validate()" type="submit">Submit</button>
+                
+    </form>
+    <script src="Task3.js"></script>
+</body>
+</html>
