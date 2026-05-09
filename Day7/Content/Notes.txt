@@ -1,0 +1,14 @@
+action user >> Elmemnt 
+
+click >> data >> server 
+
+click >> data table 
+
+select data list >> change >> data option 
+
+
+event Handeler 
+
+<button onclick="js code ">
+onclick  on handeler 
+click

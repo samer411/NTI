@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+    div{
+        border:2px solid black ;
+        background-color: lightgray;
+        width:350px;
+        height:350px;
+    }
+</style>
+
+</head>
+<body>
+    <div class="container">
+        <p>Nti Mansoura</p>
+
+        <h2 id="header">opensource</h2>
+        <!-- comment here -->
+        <span>javascript</span>
+
+        <p id="para">OS masnoura Group</p>
+
+
+    </div>
+
+    <script>
+        let container=document.querySelector(".container")
+        container.childNodes
+        container.children
+
+        para.previousSibling
+        para.previousElementSibling
+       // para.nextSibling
+
+
+       let mypara= document.createElement("p")
+       mypara.innerText="New Paragraph"
+       mypara.style.cssText=`
+       color:red;
+       background:cyan;
+       font:bold 20px tahoma
+       `
+
+       container.appendChild(mypara)
+
+      // header.prepend(mypara)
+      header.before(mypara)
+
+      header.after(mypara)
+
+      container.replaceChild(mypara,header)
+
+       container2=container.cloneNode(true)
+
+       document.body.appendChild(container2)
+
+
+
+
+
+
+    </script>
+</body>
+</html>
