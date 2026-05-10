@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task2</title>
+    <link rel="stylesheet" href="Task2.css">
+</head>
+<body>
+    <header>
+        <h1>MY CSS Live Docs</h1>
+    </header>
+    <main>
+        <h2>CSS Snipets</h2>
+        <section class="code">
+            <div class="section_header">
+                <p>Center Content (Flex)</p>
+                <button class="copy_button">Copy</button>
+            </div>
+            <p  class="css_text">
+                .preview-box{
+                    display:flex;
+                    justify-content:center;
+                    align-items:center;
+                }
+            </p>
+        </section>
+        <section class="code">
+            <div class="section_header">
+                <p>Button Hover Effect</p>
+                <button class="copy_button">Copy</button>
+            </div>
+            <p  class="css_text">
+                .preview-box button{
+                    background:#0d6efd;
+                    color:white;
+                    border:none;
+                    transition:0.3s;
+                }
+                .preview-box button:hover{
+                    background:#084298;
+                }
+            </p>
+        </section>
+        <section class="code">
+            <div class="section_header">
+                <p>Card Shadow</p>
+                <button class="copy_button">Copy</button>
+            </div>
+            <p  class="css_text">
+                .preview-box .card{
+                    background:white;
+                    border-radius:8px;
+                    box-shadow:0 5px 15px rgba(0,0,0,.2);
+                }
+                
+            </p>
+        </section>
+        <section>
+            <h2>Paste Your CSS Here</h2>
+            <textarea placeholder="Write Your CSS Here..."></textarea>
+        </section>
+        <section>
+            <h2>Live Result</h2>
+            <div class="preview-box">
+                <div class="card">
+                    <p>This is preview card</p>
+                    <button>Hover me</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="Task2.js"></script>
+</body>
+</html>
