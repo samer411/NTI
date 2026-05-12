@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         function test(){
+            return new Promise((resolve,reject)=>{
+                
+            setTimeout(()=>{
+                 let name=prompt("enter user name")
+                 if(name.trim().length>3)
+                 resolve(name)
+                else
+                reject("Not Valid Name")
+            },2000)
+
+        })}
+        test().then((name)=>{
+           console.log(name)
+           return new Promise((res,rej)=>{
+             setTimeout(() => {
+                    sal=prompt("enter salary")
+                    if(sal>4000)
+                    res("Manager")
+                else
+                   rej("employee")
+             }, 3000);
+
+           })
+
+        })
+        .then((msg)=>{ console.log(msg)
+             return new Promise((res,rej)=>{
+               setTimeout(() => {
+                let arr=[20,50,200,4]
+                 res(Math.max(...arr))
+               }, 3000);
+             })
+
+        }
+    )
+
+    .then((value)=>{
+
+        console.log(value +"  "+value*2)
+    })
+
+    console.log("script End")
+    </script>
+</body>
+</html>

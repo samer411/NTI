@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       async function test(){
+            prom=new Promise((res,rej)=>{
+               setTimeout(()=>{
+                res(1000)
+               },2000)
+            })
+          // prom.then((x=>{console.log(x)}))
+           let res= await prom;
+          console.log(res)
+           
+        }
+      // test().then((res)=>{console.log(res)})
+      //let res= test()
+    test()
+    </script>
+</body>
+</html>

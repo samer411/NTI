@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <script>
+        function test(){
+            return new Promise((res,rej)=>{
+              setTimeout(() => {
+                    res(200) 
+              }, 3000);
+
+            })
+        }
+
+        test().then((val)=>{
+            console.log(val)
+            // let arr= []
+            // arr.push(val)
+            return val; // implicit promist
+        })
+        .then((msg)=>{ alert(msg*5)})
+        
+      </script>
+</body>
+</html>

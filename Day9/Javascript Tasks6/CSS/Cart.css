@@ -1,0 +1,41 @@
+*{
+    padding:0;
+    margin:0;
+}
+body{
+    background-color: #FFCDB2;
+    font-family: "Elms Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+header{
+    height:100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFB4A2;
+    /* font from google */
+    font-family: "Nabla", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+    "EDPT" 100,
+    "EHLT" 12;
+    text-transform: uppercase;
+}
+header h1{
+    margin-right:100px;
+}
+header .main_logo{
+    width:200px;
+}
+header .cart_logo{
+    margin:0 20px;
+    width:50px;
+
+}
+table {
+    background-color: #fff;
+    height:100px;
+}

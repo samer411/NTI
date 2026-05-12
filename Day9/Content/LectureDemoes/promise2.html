@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         let testprom= new Promise((resolve,reject)=>{
+                
+            setTimeout(()=>{
+                 let name=prompt("enter user name")
+                 if(name.trim().length>3)
+                 resolve(name)
+                else
+                reject("Not Valid Name")
+            },2000)
+
+        })
+
+        testprom.then((msg)=>{ console.log(msg)})
+        .catch((msg)=>{console.log(msg)})
+   
+    </script>
+</body>
+</html>
