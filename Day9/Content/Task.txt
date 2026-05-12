@@ -8,7 +8,7 @@ as given this end point do the following points
 
 4- while adding to cart redirect to cart page ✔
 
-5- list products added to cart with quantity and price 
+5- list products added to cart with quantity and price  
 
 6- increase or decrease quantity and reflect it to price 
 

@@ -3,7 +3,6 @@
     margin:0;
 }
 body{
-    background-color: #FFCDB2;
     font-family: "Elms Sans", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
@@ -42,8 +41,8 @@ main{
 }
 .card{
     width:300px;
-    height:400px;
-    background-color: #fff;
+    height:500px;
+    background-color: #FFCDB2;
     margin:20px auto;
     padding:20px;
     border-radius: 10px;
@@ -55,12 +54,19 @@ main{
 .card img{
     border-radius: 10px;
     height:70%;
-    border: 2px solid black
 }
 .card p {
     margin:auto;
     font-weight: bold;
     font-size:20px;
+}
+.card .product_counter{
+    width:50px;
+    outline:none;
+    border:1px solid #888;
+    border-radius: 10px;
+    padding:5px 10px;
+    margin:10px auto;
 }
 .card button{
     padding:10px 20px;
