@@ -8,14 +8,14 @@ as given this end point do the following points
 
 4- while adding to cart redirect to cart page ✔
 
-5- list products added to cart with quantity and price  
+5- list products added to cart with quantity and price  ✔
 
-6- increase or decrease quantity and reflect it to price 
+6- increase or decrease quantity and reflect it to price ✔
 
-7-if user purchase cart alert that cart purchased 
+7-if user purchase cart alert that cart purchased ✔
 
-8- u can remove element form cart after adding 
+8- u can remove element form cart after adding ✔
 
-9- button in cart continue shopping return to products page 
+9- button in cart continue shopping return to products page ✔
 
 10 if user added same product in product page more than one it increase quantity in cart not add it as new item  

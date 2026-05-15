@@ -53,12 +53,15 @@ main{
 }
 .card img{
     border-radius: 10px;
-    height:70%;
+    height:60%;
 }
 .card p {
     margin:auto;
     font-weight: bold;
     font-size:20px;
+}
+.card .price {
+    color:#555;
 }
 .card .product_counter{
     width:50px;
@@ -84,4 +87,21 @@ main{
     transition:.5s;
 
     
+}
+footer{
+    background-color: #FFB4A2;
+    height:250px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+footer div{
+    padding:30px;
+}
+footer div img{
+    width:40px;
+    height:40px;
+    padding:30px;
+
 }

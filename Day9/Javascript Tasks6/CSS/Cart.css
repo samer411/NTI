@@ -3,7 +3,6 @@
     margin:0;
 }
 body{
-    background-color: #FFCDB2;
     font-family: "Elms Sans", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
@@ -38,4 +37,72 @@ header .cart_logo{
 table {
     background-color: #fff;
     height:100px;
+}
+.card{
+    width:70%;
+    height:750px;
+    background-color: #FFCDB2;
+    margin:20px auto;
+    padding:20px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.card img{
+    border-radius: 10px;
+    height:300px;
+    width:300px;
+    margin:auto;
+}
+.card p {
+    margin:auto;
+    font-weight: bold;
+    font-size:20px;
+}
+.card .price {
+    color:#555;
+}
+.card .product_counter{
+    width:50px;
+    outline:none;
+    border:1px solid #888;
+    border-radius: 10px;
+    padding:5px 10px;
+    margin:10px auto;
+}
+ button{
+    padding:10px 20px;
+    border-radius: 20px;
+    border:1px solid #888;
+    background-color: #B5838D;
+    cursor: pointer;
+    outline: none;
+    color:#fff;
+    font-size:15px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.card button:hover{
+    background-color: #1c1cff;
+    transition:.5s;
+
+    
+}
+.card .total{
+    text-align: center;
+    padding-top:20px;
+    width: 100%;
+    border-top: 1px solid #555;
+}
+.card .remove {
+    background-color: #C70000;
+    margin:20px 0;
+}
+.card .remove:hover{
+    background-color: #C70000;
+}
+.return_home{
+    display: none;
+    margin:100px auto;
 }
