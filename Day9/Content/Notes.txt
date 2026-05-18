@@ -1,0 +1,27 @@
+sync and async
+
+
+
+1 parser 
+let x =10
+
+let  variable declaration 
+x variab
+le name 
+= assign token 
+10 value token 
+
+AST 
+Abstract Structre Tree 
+
+interpreter 
+ 
+byte code 
+
+
+
+compiler 
+optimizer 
+
+
+

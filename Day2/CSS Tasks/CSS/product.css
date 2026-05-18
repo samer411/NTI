@@ -1,0 +1,27 @@
+table{
+    margin:0 200px 100px;
+}
+tr td{
+    width:20%;
+    margin:20px;
+    text-align: center;
+}
+td img{
+    margin-left: 20px;;
+}
+td p{
+        color:#c11d49;
+        font-weight: 600;
+}
+.part{
+    text-align: left;
+    padding-top: 20px;
+}
+.part h3{
+    color:#c11d49;
+    padding:20px 0;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.part p{
+    color:#584649;
+}

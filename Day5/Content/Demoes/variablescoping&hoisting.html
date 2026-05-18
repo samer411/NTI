@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var x=100; // global variable 
+        function print(){
+            console.log(x)
+         //   x=200;// global 
+           // _name="ali";// golbal
+           var  _name="ali";// local 
+           var x=200
+            console.log(x)
+
+
+
+        }
+
+      //  print();
+      //  console.log(x)
+      //  console.log(_name)
+    //   console.log(i)
+    //   for(var i=0; i<5 ; i++){
+
+    //   }
+// hoisting 
+   // var x=100   // variable declaration(hoisting ) +varible assign 
+
+    // sum=function(n1,n2){console.log(n1+n2)} // hoited as function expretion 
+//     sum(5,10)  // hoisting 
+
+//     function sum(n1,n2){
+//         console.log(n1+n2)
+//     }
+
+//      sum2(20,20) // hoisted sum(var name ) + assign 
+//      sum2=function (n1,n2){
+//         console.log(n1+n2)
+//     }
+//  sum2(20,20)
+
+    // function parent(){
+    //      function child(){
+    //         return 100;
+           
+    //      }
+    //     return child()
+    // }
+
+//       function parent(){
+//         return child()
+//          function child(){
+//             return 100;
+           
+//          }
+        
+//     }
+
+//   console.log(  parent())
+
+//   console.log(  parent())
+
+//  function parent(){
+//         return child()
+//          function child(){
+//             return 100;
+           
+//          }
+        
+//     }
+
+
+//  function parent(){
+//         return child()
+//          var child=function(){
+//             return 100;
+           
+//          }
+        
+//     }
+
+//   console.log(  parent())
+
+////////////////// let , const 
+  //console.log(z)  TDZ 
+   
+  //let z=100
+  z="ali"// losely type
+  console.log(z)
+
+    //   console.log(i)
+
+// for(let i=0; i<5 ; i++){
+//    // to acees i 
+//        }
+
+const pi =3.14;
+//pi=20
+
+
+     
+
+    </script>
+    
+</body>
+</html>

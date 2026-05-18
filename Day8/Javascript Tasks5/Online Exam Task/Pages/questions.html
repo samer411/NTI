@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Exam</title>
+    <link rel="shortcut icon" href="../Assets/circle-question-solid-full.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../Bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/questions.css">
+</head>
+<body>
+    <header>
+        <h1 class="text-white text-center p-3">Online Quiz App</h1>
+    </header>
+    <main class="d-flex flex-column justify-content-center align-items-center mt-2">
+        <h2>Question Form</h2>
+        <h3>Question 1</h3>
+        <div class="container add_question">
+            <form>
+                <div class="mb-3">
+                    <label for="id" class="form-label">Enter Question ID</label>
+                    <input name="id"type="text" class="form-control" placeholder="Question ID">
+                </div>
+                <div class="mb-3">
+                    <label for="text" class="form-label">Enter Question Text</label>
+                    <input name="text" type="text" class="form-control" placeholder="Question Text">
+                </div>
+                <div class="mb-3">
+                    <label for="correct_answer" class="form-label">Enter Question Correct Answer</label>
+                    <input name="correct_answer" type="text" class="form-control" placeholder="Question Correct Answer">
+                </div>
+                <div class="mb-3">
+                    <label for="grade" class="form-label">Enter Question Grade</label>
+                    <input name="grade" type="text" class="form-control" placeholder="Question Grade">
+                </div>
+                <button id="submit_button" class="btn btn-primary">Add Question</button>
+            </form>
+        </div>
+    </main>
+    <script src="../Bootstrap/bootstrap.bundle.min.js"></script>
+    <script type="module"src="../JS/Exam.js"></script>
+</body>
+</html>

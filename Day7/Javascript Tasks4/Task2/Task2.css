@@ -1,0 +1,64 @@
+*{
+    padding:0;
+    margin:0;
+}
+body{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #f5f5f5;
+    padding:0 30px;
+}
+header{
+    margin:30px 0;
+}
+.code{
+    background-color: #1e1e1e;
+    margin:30px 0;
+    border-radius: 10px;
+}
+.code .section_header{
+    background-color: #222222;
+    color:#fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding:10px;
+    border-radius: 10px 10px 0 0;
+}
+.code .section_header .copy_button{
+    background-color: #056eff;
+    color:#fff;
+    border-radius: 5px;
+    padding:5px 10px;
+    border:none;
+    cursor: pointer;
+}
+.code .css_text{
+    white-space: pre-wrap;
+    color:#17ba78;
+}
+textarea{
+    margin:20px 0;
+    width: 98%;
+    height:150px;
+    padding:10px;
+    color:#555
+}
+.preview-box{
+    padding:20px;
+    background-color: #fff;
+    border:1px solid #888;
+    margin:30px 0;
+    border-radius: 10px;
+}
+.preview-box .card {
+    background-color: #c7c7c7;
+    padding:20px;
+}
+
+.preview-box .card button{
+    padding:5px 15px;
+    background-color: none;
+    border: 1px solid #888;
+    margin:20px 0;
+}

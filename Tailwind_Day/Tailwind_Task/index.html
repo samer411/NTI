@@ -1,0 +1,55 @@
+<!DOCTYPE html class="dark">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tailwind</title>
+    <link rel="stylesheet" href="./src/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-[#EEEEEE] dark:bg-gray-900 dark:text-white">
+    <header class="bg-[#1F6F5F] flex h-[100px] p-5 justify-between items-center ">
+        <a href="#"><img class="w-[50px] rounded-2xl" src="./Assets/logo.jpeg" alt="Logo Image"></a>
+        <nav class="w-1/2 text-white ">
+            <ul class="hidden flex-col  sm:flex sm:flex-row absolute top-0 left-0 sm:static bg-[#1F6F5F]/90 sm:bg-transparent w-full sm:w-fit backdrop-blur-2xl gap-8 sm:gap-[4vw] capitalize h-screen sm:h-fit p-5 sm:p-0 justify-center align-middle  mt-3">
+                <li class="close block sm:hidden ml-auto px-5 pt-5 text-right"><i class="fa-solid fa-x"></i></li>
+                <li><a href="">Home</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="text-white flex justify-center items-center">
+            <div class="dark_mode  ">
+            <i class="fa-solid fa-moon cursor-pointer"></i>
+
+        </div>
+        <div class="bar cursor-pointer sm:hidden">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        </div>
+    </header>
+    <main>
+        <div class="cards flex flex-wrap justify-center">
+            <div class="bg-white m-3 rounded shadow-lg  w-[400px] h-full p-3">
+                <img class="w-full border-solid border-2 border-gray-500" src="./Assets/card_image.png" alt="">
+                <p class="mt-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe magnam aliquid molestiae natus sit commodi, hic aut tempore cum dolorem repellat. Ut ratione dolore illo maxime quas nobis, quis voluptatum.</p>
+            </div>
+            <div class="bg-white m-3 rounded shadow-lg  w-[400px] h-full p-3">
+                <img class="w-full border-solid border-2 border-gray-500" src="./Assets/card_image.png" alt="">
+                <p class="mt-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe magnam aliquid molestiae natus sit commodi, hic aut tempore cum dolorem repellat. Ut ratione dolore illo maxime quas nobis, quis voluptatum.</p>
+            </div>
+            <div class="bg-white m-3 rounded shadow-lg  w-[400px] h-full p-3">
+                <img class="w-full border-solid border-2 border-gray-500" src="./Assets/card_image.png" alt="">
+                <p class="mt-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe magnam aliquid molestiae natus sit commodi, hic aut tempore cum dolorem repellat. Ut ratione dolore illo maxime quas nobis, quis voluptatum.</p>
+            </div>
+            <div class="bg-white m-3 rounded shadow-lg  w-[400px] h-full p-3">
+                <img class="w-full border-solid border-2 border-gray-500" src="./Assets/card_image.png" alt="">
+                <p class="mt-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe magnam aliquid molestiae natus sit commodi, hic aut tempore cum dolorem repellat. Ut ratione dolore illo maxime quas nobis, quis voluptatum.</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="./main.js"></script>
+</body>
+</html>

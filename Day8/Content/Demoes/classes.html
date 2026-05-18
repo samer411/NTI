@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+     <h1 id="res"></h1>
+
+    <script>
+        // create object 
+        //1- anony  2- create object from type 
+        //  constructor function 
+        // class 
+        // inheritance >> multi level inheritance 
+        //let p = new Person()// strict mode 
+
+        class Person{
+            // fields : public || private 
+            //constructor // create object 
+            // methods || accessiros set getters 
+            // props 
+            // instance meber 
+            // cosidefunction
+            // typemember , static member 
+            // override bulit in function 
+            // public 
+            #id=10;
+            #name="ali";
+            static counter=0;
+            constructor(_id,_name){
+                // this.#id=_id;
+                // this.#name=_name
+                 this.ID=_id;
+                this.Name=_name
+                Person.counter++;
+            }
+
+            // accessiors 
+            // setId(_idval){
+            //     if(_idval<0)
+            //     this.#id=0;
+            // else
+            //     this.#id=_idval;
+
+            // }
+
+            // getId(){
+            //     return this.#id
+            // }
+
+            //   setName(_nameval){
+            //     if(_nameval.trim().length<3)
+            //     this.#name="User";
+            // else
+            //     this.#name=_nameval;
+
+            // }
+
+            // getName(){
+            //     return this.#name
+            // }
+               ///////////////// prop
+               set ID(_idval){
+                if(_idval<0)
+                this.#id=0;
+            else
+                this.#id=_idval;
+
+            }
+
+            get ID(){
+                return this.#id
+            }
+
+
+            set Name(_nameval){
+                if(_nameval.trim().length<3)
+                this.#name="User";
+            else
+                this.#name=_nameval;
+
+            }
+
+            get Name(){
+                return this.#name
+            }
+
+
+
+            print(){
+                return `${this.#id} : ${this.#name}`
+            }
+
+            // toString(){
+            //     return this.print()
+            // }
+
+             valueOf(){
+                return this.#id
+             }
+
+
+        }
+       // let p = new Person(-20,"doaa")
+        let p = new Person(20,"doaa")
+
+        let p2 = new Person(30,"do")
+        let p3 = new Person(20,"doaa")
+        let p4 = new Person(20,"doaa")
+
+
+        // p.constructor.name
+       
+        // typeof p 
+
+        res.innerText=p+"|"+p2
+        res.innerText=p+p2
+
+        // let Employee=class{
+
+        // }
+
+        // let emp=new Employee()
+
+
+    </script>
+</body>
+</html>

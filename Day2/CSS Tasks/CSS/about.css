@@ -1,0 +1,50 @@
+.title{                                
+    background-color: #c6c10c;
+    color:white;
+    text-align: center;
+    padding:20px;
+}
+.title h1{
+    font-weight: 400;
+}
+.about-photo{
+    background-image: url(../images/bg-header-about.jpg);
+    width:100%;
+    height:249px;
+
+}
+.content {
+margin:20px 250px;
+
+}
+
+.left,
+.right{
+    display: inline-block;
+    padding:20px;
+}
+.left{
+
+    width:30%;
+    background-color: #eeeded;
+}
+.left p{
+    line-height:400%;
+}
+.right{
+    margin-top:-100px;
+    width:60%;
+}
+.left h2,
+.right h3{
+    color:#c11d49;
+    font-size: 20px;
+    font-weight: 300;
+    margin:20px 0;
+}
+.right h3{
+    margin-bottom:38px;
+}
+.right div:nth-child(3) a:hover{
+    color:#c6c10c
+}

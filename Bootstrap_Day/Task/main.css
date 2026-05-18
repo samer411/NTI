@@ -1,0 +1,52 @@
+header{
+    background-color: #151922;
+}
+header h1{
+    display: none;
+}
+@media screen and (min-width:992px){
+    header h1{
+        display:block;
+    }
+}
+.services h2{
+    text-align: center;
+    margin:10px;
+}
+.purple_button{
+    background-color: #674db3;
+    color:#fff;
+}
+main .image_section{
+    background-image: url(./Assets/billy-huynh-W8KTS-mhFUE-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size:100% auto;
+    height: 300px;
+}
+.services .card img{
+    width:100px;
+    height:100px;
+}
+.about_us{
+    background-color: #f5f6fa;
+}
+.alert{
+    display: none;
+}
+.numbers .card img{
+    width:75px;
+    height:75px;
+}
+.line img{
+    height:20px;
+    margin-right: 5px;
+}
+.line p{
+    height:10px;
+}
+footer{
+    background-color: #151922;
+}
+footer img{
+    width:30px;
+}

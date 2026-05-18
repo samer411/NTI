@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <img src="assets/Images/1.jpg" width="250" height="250"><br><br>
+
+    <input type="button" id="prev" value="<<">
+    <input type="button" id="next" value=">>">
+    <input type="button" id="show" value="show">
+
+
+    <script>
+        img=document.querySelector("img")
+        prev=document.querySelector("#prev")
+        next=document.querySelector("#next")
+        counter=1;
+         next.addEventListener("click",function(){
+            counter++;
+            if(counter>6)
+            counter=1
+            img.src="assets/Images/"+counter+".jpg"
+         })//next
+
+            prev.addEventListener("click",function(){
+            counter--;
+            if(counter<1)
+            counter=6
+            img.src="assets/Images/"+counter+".jpg"
+         })//next
+
+         show.addEventListener("click",function(){
+            setInterval(function(){
+                counter++;
+            if(counter>6)
+            counter=1
+        
+            img.src="assets/Images/"+counter+".jpg"
+            },2000)
+         })
+
+    </script>
+</body>
+</html>

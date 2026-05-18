@@ -1,0 +1,28 @@
+class based object 
+access method 
+
+user defined object 
+
+liertal declaration anony onfly object 
+ var person ={
+    name:"ali"
+}
+
+obj={
+
+  key :value ,
+key :value 
+
+}
+
+let str= new String("js")
+str.
+person.name
+
+//// create user type 
+
+   class 
+// list prop 
+
+cfreate object from class 
+

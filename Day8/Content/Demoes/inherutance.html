@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <script>
+        class Person{
+            constructor(_id,_name){
+                this.id=_id;
+                this.name=_name
+
+            }
+            print(){
+                return `${this.id} : ${this.name}`
+            }
+        }
+
+        class Student extends Person{
+            constructor(_id,_name,_group){
+                super(_id,_name)// constructor chaining 
+                this.group=_group;
+            }
+            // override
+            print(){
+                return `${super.print()} : ${this.group}`
+            }
+        }
+
+
+        let std=new Student(10,"Mona","os")
+        typeof std
+        std.constructor.name
+        std instanceof Student
+        std instanceof Person  // true 
+        let p = new Person(300,"samir")
+
+        p instanceof Student
+
+
+
+
+
+      </script>
+</body>
+</html>

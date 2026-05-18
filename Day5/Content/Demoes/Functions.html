@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // declare function 
+        //1- function statement 
+        function  fun1(){
+            // block of code 
+        }// function declare 
+
+      //  fun1()// call
+
+      function print(){
+        console.log("%c Welcomt to functions ","color:orange")
+      }
+
+      //print()
+
+      // return function 
+    //   function getdouble(num){
+    //     return num*2;
+    //   }
+     
+     // var res= getdouble(10)
+
+      // parmerterized fun 
+      function greet(_name){
+        console.log(`welcome ya: ${_name}`)
+      }
+      greet("ali")
+      greet()
+      greet("ali","amira")
+      greet// function body
+
+      function sumwithten(_num){
+        console.log(_num+10)
+
+      }
+
+      /////////// default params
+     function sumAll(num1=0,num2=0){
+         console.log(num1+num2)
+     }
+
+
+      sumwithten(40)
+      sumwithten()
+      sumwithten(20,50,40)
+
+      sumAll(20)
+      sumAll()
+
+      ///////// arguments 
+      sum=0;
+      function calc(){
+        
+         // console.log(arguments)
+         for (i = 0; i < arguments.length; i++) {
+           sum+=arguments[i]
+           /// arguments array-Like 
+            
+         }
+         console.log(sum)
+
+      }
+
+
+      calc(20,50,40,100,500,true,"ali")
+
+      /////////////// 
+      //2- function expression 
+
+   var res=function (num){
+        return num*2;
+      }
+
+      ////// arrow function 
+    //   function sayhi(){return `Hiiiii`}
+        //sayhi=()=>{return `Hiiiii`}
+        sayhi=()=>eturn `Hiiiii`
+
+        getnum=_num=> _num*5
+
+      console.log(sayhi())
+      console.log(getnum(10))
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

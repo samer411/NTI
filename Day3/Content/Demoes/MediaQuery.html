@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container{
+            border:2px solid black;
+            /* width:400px;  fixed Unit */
+            width:55%; /* relative Units*/
+            height:650px;
+            margin:10px auto;
+        }
+        nav,footer{
+            border:2px solid black ;
+            width:95%;
+            height:25px;
+            background: gray;
+            margin:5px auto
+        }
+
+        article{
+            width:75%;
+            height:500px;
+            border:2px solid black ;
+            background: lightpink;
+
+        }
+        aside{
+              width:20%;
+            height:500px;
+            border:2px solid black ;
+            background: lightgreen;
+           
+        }
+        aside,article{
+             display:inline-block;
+             margin:5px auto;
+        }
+
+        @media all and (orientation: landscape) {
+                .container{
+            border:2px solid black;
+            /* width:400px;  fixed Unit */
+            width:55%; /* relative Units*/
+            height:650px;
+            margin:10px auto;
+        }
+        nav,footer{
+            border:2px solid black ;
+            width:95%;
+            height:25px;
+            background: gray;
+            margin:5px auto
+        }
+
+        article{
+            width:75%;
+            height:500px;
+            border:2px solid black ;
+            background: lightpink;
+
+        }
+        aside{
+              width:20%;
+            height:500px;
+            border:2px solid black ;
+            background: lightgreen;
+           
+        }
+        aside,article{
+             display:inline-block;
+             margin:5px auto;
+        }
+        }
+
+
+        @media all and (orientation: portrait) {
+             .container{
+            border:2px solid black;
+            /* width:400px;  fixed Unit */
+            width:55%; /* relative Units*/
+            height:650px;
+            margin:10px auto;
+        }
+        nav,footer{
+            border:2px solid black ;
+            width:95%;
+            height:25px;
+            background: magenta;
+            margin:5px auto
+        }
+
+        article{
+            width:97%;
+            height:500px;
+            border:2px solid black ;
+            background: crimson;
+
+        }
+        aside{
+            display:none;
+        }
+        }
+        @media all and(min-width:300px)and (max-width:650px){
+            /* css  */
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>MyNav Bar</nav>
+        <article>My Content</article>
+        <aside> Push Advertisment</aside>
+        <footer>copy Rights reserved </footer>
+    </div>
+</body>
+</html>

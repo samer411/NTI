@@ -1,0 +1,107 @@
+*{
+    padding:0;
+    margin:0;
+}
+body{
+    background-color: #bcbcbc;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+header{
+    background-color: #101825;
+    color:white;
+    display: flex;
+    padding:20px;
+    align-items: center;
+}
+header input{
+    width:70%;
+    padding:5px 20px;
+    margin:0 20px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+}
+header p,
+header h2 {
+    white-space: nowrap;
+}
+main {
+    margin-top:50px;
+    display:flex;
+    justify-content: space-between;
+    padding:0 50px;
+}
+main .left{
+    width:25%;
+}
+main .left ul{
+    background-color: white;
+    list-style: none;
+    padding:20px 0; 
+    border-radius: 10px;
+}
+main .left ul li{
+    margin:10px;   
+    background-color: #bcbcbc; 
+    padding:5px 15px;
+    border-radius: 10px;
+}
+.right{
+    width:70%;
+}
+.cards{
+    width:100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+}
+.card{
+    width:200px;
+    background-color: white;
+    border-radius: 10px ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom:10px;
+    margin-bottom: 20px;
+}
+.card .text{
+    padding-left:10px;
+}
+.card img{
+    width:100%;
+    border-radius: 10px 10px 0 0 ;
+}
+.card p:first-child{
+    font-weight: bold;
+    margin:10px 0;
+}
+.card span{
+    color:#268652;
+}
+.card button{
+    display: block;
+    padding:10px;
+    width:90%;
+    margin:auto;
+    background-color: #101826;
+    border:none;
+    color:white;
+    border-radius: 15px;
+    margin-top:20px;
+}
+@media all and (max-width:600px){
+    main{
+        flex-direction: column;
+    }
+    .left,
+    .right{
+        width:100% !important;
+    }
+    .left li{
+        text-align: center;
+    }
+    .card{
+        width:100%;
+        margin:20px 0;
+    }
+}

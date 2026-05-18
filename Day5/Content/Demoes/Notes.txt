@@ -1,0 +1,10 @@
+function >> block of code >> reuseable 
+block 
+
+
+int fun(){
+
+
+}
+
+function funname(){}

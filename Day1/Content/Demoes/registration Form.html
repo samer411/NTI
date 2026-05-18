@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="darkmagenta">
+    <form action="server.html" method="get" novalidate>
+      <table width="600" align="center" height="500" bgcolor="lightblue">
+        <tr>
+            <th> User Name</th>
+            <td><input type="text" name="usr" placeholder="Enter User Name"size="60"/></td>
+        </tr>
+
+         <tr>
+            <th> Email</th>
+            <td><input type="email" name="mail" placeholder="Enter User mail"size="60" required/></td>
+        </tr>
+
+         <tr>
+            <th> Password</th>
+            <td><input type="password" name="pass" placeholder="Enter User pass"size="60"/></td>
+        </tr>
+
+
+         <tr>
+            <th> age</th>
+            <td><input type="number" name="age" min="20" max="30"/></td>
+        </tr>
+
+
+         <tr>
+            <th> Birth Date</th>
+            <td><input type="date" name="DOB"/></td>
+        </tr>
+
+         <tr>
+            <th> Gender</th>
+           <td>
+             <table width="400">
+                <tr>
+                     <td><input type="radio" name="gender" value="male"/>Male</td>
+                      <td><input type="radio" name="gender" value="Femal"/>Female</td>
+                </tr>
+             </table>
+
+           </td>
+        </tr>
+
+         <tr>
+            <th> Cources</th>
+           <td>
+             <table width="400">
+                <tr>
+                     <td><input type="checkbox" name="crs" value="js"/>JS</td>
+                     <td><input type="checkbox" name="crs" value="PHP"/>PHP</td>
+                     <td><input type="checkbox" name="crs" value="React"/>JReactS</td>
+
+                    </tr>
+                    <tr>
+                     <td><input type="checkbox" name="crs" value="Mongo"/>Mongo</td>
+                     <td><input type="checkbox" name="crs" value="Linux"/>Linus</td>
+                     <td><input type="checkbox" name="crs" value="node"/>NodeJs</td>
+
+                    </tr>
+
+             </table>
+
+           </td>
+        </tr>
+
+     <tr>
+        <th> Address</th>
+        <td>
+            <select name="city">
+                <option value="cairo"> Cairo</option>
+                <option value="Mansoura"> Mansoura</option>
+                <option value="Alexandria"> Alexandria</option>
+                <option value="Tanta"> Tanta</option>
+
+            </select>
+        </td>
+     </tr>
+
+
+     <tr>
+        <td colspan="2">
+            <table align="center">
+                <tr>
+                    <td><input type="submit" value="Register"> </td>
+                     <td><input type="reset" value="Cancel"> </td>
+
+                </tr>
+            </table>
+        </td>
+     </tr>
+
+
+
+
+      </table>
+
+
+
+    </form>
+</body>
+</html>

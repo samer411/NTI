@@ -1,0 +1,86 @@
+HTML 
+Hyper Text Mark up language 
+
+interpretation 
+interpreter 
+debugging 
+
+
+client 
+server 
+
+http://www.fb.com  ==> uri 
+www.fb.com 
+http:hyper vtext transfere protocole 
+
+
+
+predefined 
+
+paired tags 
+
+<p> content </p>
+selfclosing tag 
+<img />
+
+attribute 
+
+<p align="center">NTI</p>
+
+- static web page 
+
+<html>
+<head>
+<title></title>
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+text
+img 
+table 
+form 
+//////// 
+media 
+audio 
+video 
+ new tags 
+header 
+navbar 
+aside 
+footer 
+section 
+
+
+
+
+form 
+collect Data 
+
+action 
+Method 
+query string 
+addressbar 
+ post 
+get 
+
+action >> send data 
+html page 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

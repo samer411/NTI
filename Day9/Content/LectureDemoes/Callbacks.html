@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         function greet(_name,callback){
+            setTimeout(() => {
+                 console.log("hi  "+_name)
+                 callback()
+            }, 3000);
+         }
+
+        function bye(){
+            console.log("goood bye")
+        }
+
+      //  greet("doaa",bye)
+       // bye()
+       greet("sara",()=>{   console.log("goood bye")})
+
+
+       function wakeup( callback){
+              setTimeout(() => {
+                 console.log("1- wake up ")
+              callback()
+              }, 1000);
+       }
+       function washhand(callback ){
+                    setTimeout(() => {
+                        console.log("2- wake up ")
+                    callback()
+                    }, 1000);
+       }
+       function havebreakfast(callback){
+          setTimeout(() => {
+             console.log("3- break fast")
+             callback()
+          }, 1000);
+       }
+       function gowork(){
+             setTimeout(() => {
+                console.log("4- going to work ")
+                
+             }, 1000);
+       }
+
+
+      wakeup(washhand(havebreakfast(gowork())))// callbackhell 
+    </script>
+</body>
+</html>

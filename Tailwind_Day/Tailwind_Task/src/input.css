@@ -1,0 +1,9 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+@layer base{
+    li{
+        @apply hover:text-[#6FCF97] relative sm:before:content-[""] sm:before:absolute sm:before:not-visited:bottom-0 sm:before:w-0 sm:before:bottom-[-5px] sm:before:h-1 sm:before:bg-[#6FCF97] sm:before:rounded-4xl sm:before:duration-150 sm:hover:before:w-full
+    }
+}

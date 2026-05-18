@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str="ali"// literal declaration >> saving stack 
+        var mystr=new String("welcome toLowerCase() js")//>> heap 
+        mystr.constructor.name
+        mystr.valueOf()
+        mystr[0]
+        typeof mystr[0]// string 
+        mystr.charAt(1)
+         mystr.indexOf("e")
+        mystr.lastIndexOf("z")
+        mystr.substring(0,3)
+          mystr.substring(3)//'come toLowerCase() js'
+           mystr.slice(0,3)
+          mystr.slice(3)//'come toLowerCase() js
+          mystr.slice(-2)
+          mystr.includes("js")
+          mystr.toUpperCase()
+          mystr.toLowerCase()
+          mystr.replace("w","y")
+          mystr.split()
+          mystr.split(" ")
+          mystr.split(" ")[0].charAt()
+          mystr.split(" ")[0][0]
+          "haha".repeat(10)
+          "    Alaa".trim().length
+
+          /////////////////////
+          var newstr=""
+          var strr=new String("NtiMaNsoura")
+          console.log(`beFore : ${strr.valueOf()}`)
+          for(i=0;i<strr.length;i++){
+            if(strr[i]==strr[i].toUpperCase()){
+               newstr+= strr[i].toLowerCase()
+            }
+             else{
+            newstr+=strr[i].toUpperCase()
+          }
+          }
+          console.log(`After : ${newstr}`)
+
+          
+         
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

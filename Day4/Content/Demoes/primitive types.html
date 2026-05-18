@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="external.js"></script>
+
+    <script>
+        // primitive types (number , string , boolean , null ,undefined)
+       var num ;
+          console.log(num +" : "+typeof num)
+        var num =100;// intaializtion // literal declaration  
+        console.log(num +" : "+typeof num)
+        num=200.5
+        console.log(num +" : "+typeof num)
+        num="ali"
+        console.log(num +" : "+typeof num)
+     
+        num=true
+         console.log(num +" : "+typeof num)
+         ///////
+         var str=""
+            console.log(str +" : "+typeof str)
+            str="A"
+            console.log(str +" : "+typeof str)
+          str=''
+            console.log(str +" : "+typeof str)
+          str='2020'
+            console.log(str +" : "+typeof str)
+        str='true'
+            console.log(str +" : "+typeof str)
+/////////////////////// 
+//+ operator with num >> arthmetic op 
+//+ string >>> contacting >> string + any type 
+
+      console.log("welcome to js "+"str2 is here ")
+      console.log('i\'ll be ontime ')
+      console.log("i\"ll be ontime ")
+      console.log('i\\ll be ontime ')
+      console.log('i\nll be ontime ')
+   var fname="alaa";
+
+      console.log(` i'll be on time myname is :  ${fname}`)
+
+      var bool=!true
+      console.log(bool + typeof bool)
+      //+perator  bool+bool  >> num && bool+num >> num >> bool+str>>sr
+      console.log(true +true )
+      console.log(true +false )
+      console.log(!true +10 )
+
+
+
+      /////// udefined , null 
+
+      2==2 // 
+
+      var myvar; // undefined  i decaled but not assigned value
+      var mynull=null // null 
+      myvar==mynull // true 
+      myvar===mynull // false 
+
+
+     var grade=90;
+    //  if(grade>50)
+    //     console.log("%c Sucesssssss","color:lightgreen")
+     
+    //  else
+    //     console.log("%c Fail","color:red")
+
+        // ternary operator 
+        //(condtion ? operand1 : operand 2)
+        (grade>50? console.log("%c Sucesssssss","color:lightgreen"):console.log("%c Fail","color:red"))
+
+     
+
+    </script>
+</body>
+</html>
