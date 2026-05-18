@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-white  text-black dark:bg-black  dark:text-white">
+    <h1 class="text-3xl font-bold underline">
+        Hello world!
+    </h1>
+    <div class="text-black flex justify-center items-center">
+        <div class="dark_mode  ">
+            <i class="fa-solid fa-moon cursor-pointer"></i>
+        </div>
+
+    </div>
+    <script>
+        document.querySelector(".dark_mode").addEventListener("click", () => {
+            document.documentElement.classList.toggle("dark")
+        })
+
+        document.documentElement.classList.toggle(
+            "dark",
+            localStorage.theme === "dark" ||
+            (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches),
+        );
+        // Whenever the user explicitly chooses light mode
+        localStorage.theme = "light";
+        // Whenever the user explicitly chooses dark mode
+        localStorage.theme = "dark";
+        // Whenever the user explicitly chooses to respect the OS preference
+        localStorage.removeItem("theme");
+    </script>
+</body>
+
+</html>
