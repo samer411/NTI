@@ -1,4 +1,4 @@
-export class Question{
+export default class Question{
     constructor(_id,_text,_correct_answer,_grade){
         this.id = _id;
         this.text = _text;

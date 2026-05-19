@@ -1,3 +1,5 @@
+import Question from "./Question.js";
+
 let question_array = JSON.parse(localStorage.getItem("questions"));
 console.log(question_array);
 const main = document.getElementsByTagName("main")[0];
@@ -35,8 +37,11 @@ main.innerHTML += `
 
 
 
+const h2 = document.getElementsByTagName("h2")[0]
 const h3 = document.getElementsByTagName("h3")[0]
 const p_question = document.getElementsByClassName("Question")[0]
+const student_input = document.getElementsByTagName("input")[0]
+const form = document.getElementsByTagName("form")[0]
 document.addEventListener("click",(e)=>{
     if(e.target.classList.contains("btn")){
         console.log(e.target)
@@ -55,16 +60,44 @@ document.addEventListener("click",(e)=>{
         e.preventDefault() 
         counter++;
         if(counter==question_array.length){
+            let arr_question_objects =[]
+            question_array.forEach((q)=>{
+                if(q.correct_answer === q.student_answer){
+                    arr_question_objects.push(q)
+                }
+            })
+            console.log(arr_question_objects)
             e.target.innerText = "Finish Quiz"
+            main.innerHTML=`<h1>Result</h1>
+            `
+
+
         }
+
         else{
+            e.target.innerText = "Next Question"
             h3.innerText=`Question ${question_array[counter].id}`
             p_question.innerText = `Question: ${question_array[counter].text}`
+            student_input.value = ""
+        }
+    }
+})
+document.addEventListener("click",(e)=>{
+    if(e.target.classList.contains("before-question")){
+        e.preventDefault() 
+        counter--;
+        console.log(counter)
+        document.querySelector(".next-question").innerText="Next Question"
+        if(counter<0){
+            e.target.innerText = "Start Quiz"
+        }
+        else{
+            console.log(question_array[counter].id)
+            h3.innerText=`Question ${question_array[counter].id}`
+            p_question.innerText = `Question: ${question_array[counter].text}`
+            console.log(question_array[counter])
+            student_input.value=question_array[counter].student_answer;
         }
         
     }
 })
-
-// document.addEventListener("click",(e)=>{
-//     if(e.target.classList.contains[])
-// })
