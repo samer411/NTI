@@ -1,5 +1,3 @@
-import nodeUrl = require("node:url");
-
 type Meal = {
     idMeal : string;
     strMeal : string;

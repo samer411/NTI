@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Question } from "./Question.js";
 export class Exam {
     constructor(){
@@ -43,12 +42,3 @@ form.addEventListener("submit",(e)=>{
         console.log(JSON.parse(localStorage.getItem("questions")))
     }
 })
-=======
-import { Question } from "./Question";
-export class Exam {
-    
-    addQuestion(_id,_text,_correct_answer,_grade){
-        let q = new Question(_id,_text,_correct_answer,_grade)
-    }
-}
->>>>>>> f48835738acc4162e2e2340786475dafeb0d69d2
