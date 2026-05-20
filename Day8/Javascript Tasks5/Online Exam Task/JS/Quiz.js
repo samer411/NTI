@@ -1,5 +1,4 @@
-import Question from "./Question.js";
-
+import {Question} from "./Question.js"
 let question_array = JSON.parse(localStorage.getItem("questions"));
 console.log(question_array);
 const main = document.getElementsByTagName("main")[0];
