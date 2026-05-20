@@ -55,23 +55,36 @@ document.addEventListener("click",(e)=>{
         
     }
 })
+let result = 0;
+let result_html=``;
 document.addEventListener("click",(e)=>{
     if(e.target.classList.contains("next-question")){
         e.preventDefault() 
         counter++;
         if(counter==question_array.length){
-            let arr_question_objects =[]
             question_array.forEach((q)=>{
                 if(q.correct_answer === q.student_answer){
-                    arr_question_objects.push(q)
+                    result += parseInt(q.grade)
+                    result_html+=`
+                    <div class="bg-white rounded p-3 w-25 my-3">
+                    <p>Question:${q.text}</p>
+                    <p>Student Answer:<span class="text-success">${q.student_answer}<span></p>
+                    </div>
+                    `
+                }
+                else{
+                    result_html+=`
+                    <div class="bg-white rounded p-3 w-25 my-3">
+                    <p>Question:${q.text}</p>
+                    <p>Student Answer:<span class="text-danger">${q.student_answer}<span></p>
+                    <p>Student Answer:<span class="text-success">${q.correct_answer}<span></p>
+                    </div>
+                    `
                 }
             })
-            console.log(arr_question_objects)
+            main.innerHTML=`<h1>Result is <span class="text-success">${result}<span></h1>`+result_html;
+            console.log(result)
             e.target.innerText = "Finish Quiz"
-            main.innerHTML=`<h1>Result</h1>
-            `
-
-
         }
 
         else{
