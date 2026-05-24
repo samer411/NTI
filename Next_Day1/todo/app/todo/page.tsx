@@ -5,13 +5,6 @@ import { todoListContext } from '../todoListContext'
 
 function Todo() {
 
-    function reducer(state:[],action){
-        switch(action.type){
-            case("add"):state.push()
-            case("remove"):
-        }
-    }
-    const initialState = []
 
     const todoList = useContext(todoListContext)
     const tasksFromTodoListContext = todoList.map((e,i)=>{
@@ -28,7 +21,10 @@ function Todo() {
                 <label htmlFor="task">Enter The Task:</label>
                 <input className='w-full' type='text' id="task"placeholder='Task...'></input>
             </div>
-            <button onClick={console.log("added")}>Add</button>
+            <button onClick={()=>{
+                const form = new FormData();
+                form.append
+            }}>Add</button>
         </form>
         {tasksFromTodoListContext}
     </div>
