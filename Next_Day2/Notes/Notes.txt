@@ -1,0 +1,2 @@
+I discovered that my skills in react are shit and from all hooks i can use the useState one so i need a detailed course on react that i am going to search and find
+it and start studying it!
