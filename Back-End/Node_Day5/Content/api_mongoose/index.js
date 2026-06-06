@@ -1,15 +1,12 @@
 const express = require('express')
 const server = express()
 const mongoose = require('mongoose')
+const dotenv = require('dotenv')
+dotenv.config({path:"./config.env"})
 const postroute = require('./routes/post.route')
 const userroute = require('./routes/user.route')
-const dotenv = require('dotenv')
-const authRoute = require("./routes/auth.route")
-dotenv.config({path:"./config.env"})
-
-
+const authroute = require('./routes/auth.route')
 mongoose.connect(process.env.local_mongo)
-//mongodb+srv://samer:<db_password>@cluster0.fcztnxp.mongodb.net/mansoura
 .then(()=>{console.log("DB Done")})
 .catch(err=>{console.log(err)})
 server.use(express.json())
@@ -19,12 +16,13 @@ server.use((req,res,next)=>{
 })
 server.use('/posts',postroute)
 server.use('/users',userroute)
-server.use('/auth',authRoute)
+server.use('/auth',authroute)
 
 // const applevel= 
 // server.use(applevel)
+const port = process.env.port||3000
 
-server.listen(3000,()=>{
+server.listen(port,()=>{
     console.log('server Listen')
 })
  
