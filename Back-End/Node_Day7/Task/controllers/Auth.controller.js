@@ -3,6 +3,8 @@ const User = require("../models/user.model");
 const createToken = require("../utils/tokenCreate");
 const AppError = require("../utils/appError");
 const appError = require("../utils/appError");
+const bcrypt = require('bcryptjs')
+
 exports.register = async (req, res, next) => {
   
   try {
@@ -24,11 +26,12 @@ exports.login = async (req, res,next) => {
   try {
     const { email, password } = req.body;
     const user = await User.findOne({ email });
+    console.log(user)
+    console.log(password)
+    console.log(user.password)
     const isMatchPassword = await user.comparePassword(password, user.password);
     console.log(isMatchPassword)
     if (!isMatchPassword) {
-      // const err='invalid password'
-      // throw new Error(err)
       return next(new AppError("invalid password", 400));
     }
     const token = createToken({
