@@ -9,7 +9,7 @@ const {registerValidate,loginValidate} = require("../validators/user.validator")
 const validateMiddleware = require("../middlewares/joi.middleware")
 
 // filteration route must be the first one before everything because he will not distinguish between parameters(id) and query string
-router.use(printRouterName)
+// router.use(printRouterName)
 router.get("/filter",userController.filterUsers)
 router.get("/",userController.getAllUsers)
 router.get("/:id",userController.getUserById)

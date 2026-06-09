@@ -22,7 +22,8 @@ exports.login = async (req, res,next) => {
   try {
     const { email, password } = req.body;
     const user = await User.findOne({ email });
-    const isMatchPassword = await user.passwordCompare(password, user.password);
+    const isMatchPassword = await user.comparePassword(password, user.password);
+    console.log(isMatchPassword)
     if (!isMatchPassword) {
       // const err='invalid password'
       // throw new Error(err)
