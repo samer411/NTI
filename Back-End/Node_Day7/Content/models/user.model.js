@@ -5,11 +5,11 @@ const userSchema = new mongoose.Schema({
   email: {
     type: String,
     required: [true, "email is required"],
-    unique: [true, "email must be unique"],
-    match: [
-      "^((?!\.)[\w\-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$",
-      "invalid email",
-    ],
+    // unique: [true, "email must be unique"],
+    // match: [
+    //   "^((?!\.)[\w\-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$",
+    //   "invalid email",
+    // ],
   },
   password: { type: String, required: [true, "password is required"] },
   confirmPassowrd: {

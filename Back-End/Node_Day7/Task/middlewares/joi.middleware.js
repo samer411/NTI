@@ -1,13 +1,11 @@
 const validate = (schema)=>{
     return(req,res,next)=>{
-        const inputdata={...req.body}
-
-        const validation= schema.validate(inputdata)
+        const validation= schema.validate(req.body)
         if(validation.error){
-           res.status(400).json({message:"server error"})
+            res.status(400).json({message:validation.error.message})
         }
-        
-        return next()
+        // req.body = validation.value;
+        next()
     }
 }
 

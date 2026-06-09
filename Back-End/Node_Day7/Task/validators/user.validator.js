@@ -13,7 +13,7 @@ const registerValidate = joi.object({
     confirmPassword:joi.string().required().valid(joi.ref('password')),
     age:joi.number().integer()
 
-}).validate;
+});
 
 
 const loginValidate = joi.object({

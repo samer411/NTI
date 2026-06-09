@@ -4,16 +4,18 @@ const createToken = require("../utils/tokenCreate");
 const AppError = require("../utils/appError");
 const appError = require("../utils/appError");
 exports.register = async (req, res, next) => {
+  
   try {
     const { name, email, password, role } = req.body;
     const newUser = new User({ name, email, password, role });
     await newUser.save();
+    
     const token = createToken({
       name: newUser.name,
       role: newUser.role,
       id: newUser._id,
     });
-    res.status(201).json({ message: "User Created", user: newUser, token });
+    return res.status(201).json({ message: "User Created", user: newUser, token });
   } catch (err) {
     next(appError(err, 400));
   }
