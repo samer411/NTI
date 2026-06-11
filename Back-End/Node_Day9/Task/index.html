@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+</head>
+<body>
+    <input type="text" placeholder="UserName" id="userName">
+    <select id="room">
+        <option value="g1">Group 1</option>
+        <option value="g2">Group 2</option>
+    </select>
+    <button onclick="register()">Register</button>
+    <input type="text" placeholder="Send to" id="sendTo">
+    <input type="text" placeholder="Message" id="message">
+    <button onclick="sendMessage()">Send</button>
+    <input type="text" placeholder="Group Message" id="groupMessage">
+    <button onclick="sendGroupMessage()">Send to Group</button>
+    <ul id="chat">Chat</ul>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.8.1/socket.io.js" integrity="sha512-8BHxHDLsOHx+flIrQ0DrZcea7MkHqRU5GbTHmbdzMRnAaoCIkZ97PqZcXJkKZckMMhqfoeaJE+DNUVuyoQsO3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        const socket = io();
+        socket.on('resJoinRoom',(data)=>{
+            console.log(data)
+        })
+        socket.on('privateMessage',(data)=>{
+            const li = document.createElement("li")
+            li.innerText = `${data.sender} sent ${data.messageBody}`
+            console.log(li)
+            const ul = document.getElementById("chat")
+            ul.appendChild(li)
+        })
+        function register (){
+            const user = document.getElementById("userName").value;
+            const room = document.getElementById("room").value
+            console.log(socket.id)
+            console.log("client",user)
+            socket.emit('register',user)
+            socket.emit('joinRoom',room)
+        }
+        function sendMessage(){
+            const messageBody = document.getElementById("message").value
+            const messageReceiver = document.getElementById("sendTo").value
+            socket.emit('privateMessage',{messageReceiver,messageBody})
+        }
+        function sendGroupMessage(){
+            const messageBody = document.getElementById("groupMessage").value
+            const room = document.getElementById("room").value
+
+            socket.emit('roomMessage',{room:room,messageBody:messageBody})
+ 
+        }
+    </script>
+</body>
+</html>

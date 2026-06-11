@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chat app</title>
+</head>
+<body>
+    <input id="username" placeholder="username">
+    <button onclick="register()"> join</button>
+    <input id="sendto" placeholder="send to">
+    <input id="msg" placeholder="message">
+    <button onclick="sendmsg()">send</button>
+    <ul id="chat"> chat</ul>
+   <script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.8.1/socket.io.js"></script>
+<script>
+  const socket = io();
+  socket.on("prvitemsg",(data)=>{
+    const li = document.createElement("li")
+    li.innerText=`${data.sender}:${data.msg_body}`
+    document.getElementById('chat').appendChild(li)
+  })
+  function register()
+{
+    const username = document.getElementById("username").value
+    socket.emit("register",username)
+}
+function sendmsg(){
+    socket.emit("prvitemsg",{
+        receive: document.getElementById("sendto").value,
+        msg_body:document.getElementById('msg').value
+    })
+}
+</script>
+    
+</body>
+</html>

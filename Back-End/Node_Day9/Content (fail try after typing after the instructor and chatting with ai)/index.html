@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+</head>
+
+<body>
+    <input id="userName" placeholder="username">
+    <button onclick="regsiter()">Register</button>
+    <input id="sendTo" placeholder="send to">
+    <input id="msg" placeholder="Message">
+    <button onclick="sendMessage()">Send</button>
+    <ul id="chat">Chat</ul>
+    <script type="module">
+        import { io } from "https://cdn.socket.io/4.8.3/socket.io.esm.min.js";
+
+        const socket = io();
+        socket.on('privateMessage', (data) => {
+            const li = document.createElement('li')
+            li.innerText = `${data.sender}:${data.msgBody}`
+            document.getElementById("chat").appendChild(li)
+
+        })
+        function regsiter() {
+            const userName = document.getElementById("userName").value
+            socket.emit('register', userName)
+        }
+        function sendMessage() {
+            const receiver = document.getElementById("sendTo").value
+            const msg = document.getElementById('msg').value
+            socket.emit('privateMessage', receiver, msg)
+        }
+
+    </script>
+</body>
+
+</html>
