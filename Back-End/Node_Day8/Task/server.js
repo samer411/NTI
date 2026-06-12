@@ -19,7 +19,7 @@ io.on("connection",(socket)=>{
     })
     socket.on('room_msg',(data)=>{
         console.log(data.msg)
-        io.to(data.room).emit('room_msg',{
+        io.to(data).emit('room_msg',{
             from:socket.id,
             msg:data.msg
         })

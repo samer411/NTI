@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat</title>
 </head>
+
 <body>
     <input type="text" placeholder="UserName" id="userName">
-    <select id="room">
+    <select id="group">
         <option value="g1">Group 1</option>
         <option value="g2">Group 2</option>
     </select>
@@ -18,39 +20,49 @@
     <input type="text" placeholder="Group Message" id="groupMessage">
     <button onclick="sendGroupMessage()">Send to Group</button>
     <ul id="chat">Chat</ul>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.8.1/socket.io.js" integrity="sha512-8BHxHDLsOHx+flIrQ0DrZcea7MkHqRU5GbTHmbdzMRnAaoCIkZ97PqZcXJkKZckMMhqfoeaJE+DNUVuyoQsO3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.8.1/socket.io.js"
+        integrity="sha512-8BHxHDLsOHx+flIrQ0DrZcea7MkHqRU5GbTHmbdzMRnAaoCIkZ97PqZcXJkKZckMMhqfoeaJE+DNUVuyoQsO3Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
         const socket = io();
-        socket.on('resJoinRoom',(data)=>{
+        socket.on('resJoinRoom', (data) => {
             console.log(data)
         })
-        socket.on('privateMessage',(data)=>{
+        socket.on('privateMessage', (data) => {
             const li = document.createElement("li")
             li.innerText = `${data.sender} sent ${data.messageBody}`
             console.log(li)
             const ul = document.getElementById("chat")
             ul.appendChild(li)
         })
-        function register (){
-            const user = document.getElementById("userName").value;
-            const room = document.getElementById("room").value
-            console.log(socket.id)
-            console.log("client",user)
-            socket.emit('register',user)
-            socket.emit('joinRoom',room)
+        function register() {
+            const userName = document.getElementById("userName").value;
+            const group = document.getElementById("group").value
+            console.log(socket.id) 
+            console.log("client", userName)
+            socket.emit('register', {userName,group})
+            socket.emit('joinRoom', group)
         }
-        function sendMessage(){
+        function sendMessage() {
             const messageBody = document.getElementById("message").value
             const messageReceiver = document.getElementById("sendTo").value
-            socket.emit('privateMessage',{messageReceiver,messageBody})
-        }
-        function sendGroupMessage(){
+            socket.emit('privateMessage', { messageReceiver, messageBody })
+        } socket.on('roomMessage', (data) => {
+            const li = document.createElement("li")
+            li.innerText = `${data.sender} sent ${data.messageBody}`
+            console.log(li)
+            const ul = document.getElementById("chat")
+            ul.appendChild(li)
+        })
+        function sendGroupMessage(data) {
             const messageBody = document.getElementById("groupMessage").value
-            const room = document.getElementById("room").value
+            const group = document.getElementById("group").value
 
-            socket.emit('roomMessage',{room:room,messageBody:messageBody})
- 
+
+            socket.emit('roomMessage', { group, messageBody })
+
         }
     </script>
 </body>
+
 </html>
