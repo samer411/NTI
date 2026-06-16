@@ -1,0 +1,10 @@
+const express = require('express')
+const userRoute = require("./routes/users.route")
+const postRoute = require("./routes/posts.route")
+const app = express()
+app.use(express.json())
+app.use('/users',userRoute)
+app.use('/posts',postRoute)
+app.listen(8000,()=>{
+    console.log("Server Is Running...")
+})

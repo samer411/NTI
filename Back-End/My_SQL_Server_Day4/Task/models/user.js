@@ -11,13 +11,19 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       User.hasMany(models.post,{
-        foreignKey:'userId'
+        foreignKey:'userId', 
       })
     }
   }
   User.init({
     name: DataTypes.STRING,
-    email: DataTypes.STRING
+    email: DataTypes.STRING,
+    gender: {
+      type:DataTypes.STRING,
+      validate:{
+          isIn:[['m','f']]
+        }
+      }
   }, {
     sequelize,
     modelName: 'User',
