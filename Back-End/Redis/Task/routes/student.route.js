@@ -38,7 +38,11 @@ router.post("/login",async(req,res)=>{
         console.log(foundStudent.password)
         const b = await bcrypt.compare(student.password,foundStudent.password)
         if(b){
+            console.log(req.session)
             res.status(200).json({message:"User Logged In Successfully"})
+        }
+        else{
+            res.status(401).json({message:"Please Enter Valid Credentials"})
         }
     }
     res.status(200).json({message:"User Found"})
