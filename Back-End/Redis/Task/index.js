@@ -8,12 +8,23 @@ const {RedisStore} = require("connect-redis")
 
 mongoose.connect("mongodb://127.0.0.1/School")
     .then(()=>{console.log("Monoose DB Connected Successfully")})
+const connectionRedis = redis.createClient({url:"redis://localhost:6379"})
+connectionRedis.connect()
+.then(()=>{console.log("Redis Done")})
+.catch((err)=>{console.log(err)})
 const app = express()
 
 app.use(express.json())
 app.use(
     session({
-        store:
+        store: new RedisStore({client:connectionRedis}),
+        secret:"sssss",
+        resave:false,
+        saveUninitialized:false,
+        cookie:{
+            httpOnly:true,
+            maxAge:
+        }
     })
 )
 
