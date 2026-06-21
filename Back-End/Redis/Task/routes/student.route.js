@@ -38,6 +38,10 @@ router.post("/login",async(req,res)=>{
         console.log(foundStudent.password)
         const b = await bcrypt.compare(student.password,foundStudent.password)
         if(b){
+            req.session.student={
+              name:student.name,
+              email:student.email
+            }
             console.log(req.session)
             res.status(200).json({message:"User Logged In Successfully"})
         }
@@ -45,8 +49,13 @@ router.post("/login",async(req,res)=>{
             res.status(401).json({message:"Please Enter Valid Credentials"})
         }
     }
-    res.status(200).json({message:"User Found"})
+    
 
+})
+router.post("/logout",async(req,res)=>{
+  req.session.destroy();
+  res.clearCookie("connect.sid")
+  res.status(200).json({message:"You have logged out"})
 })
 
 module.exports = router;

@@ -1,10 +1,11 @@
 const express = require("express")
 const router = express.Router();
 const Course = require("../models/course.model")
+const authenticateMiddleware = require("../middlewares/authenticate.middleware")
+const deleteCourseMiddleware = require("../middlewares/deleteCourse.middleware")
 
-router.post("/create",async(req,res)=>{
+router.post("/create",authenticateMiddleware,async(req,res)=>{
     const course = req.body;
-    console.log(course)
     const newCourse = Course({
         title:course.title,
         description:course.description,
@@ -21,5 +22,13 @@ router.post("/create",async(req,res)=>{
     }
     ) 
 })
+router.get("/getAllCourses",authenticateMiddleware,async(req,res)=>{
+    const courses = await Course.find()
+    res.status(200).json({message:"This is All Course",courses:courses})
+})
+ router.delete("/delete/:id",deleteCourseMiddleware,async(req,res)=>{
+    const deletedCourse = await Course.findByIdAndDelete(req.params.id);
+    res.status(200).json({message:"Course Deleted Successfully",DeletedCourse:deletedCourse})
+ })
 
 module.exports = router;

@@ -17,13 +17,13 @@ const app = express()
 app.use(express.json())
 app.use(
     session({
-        store: new RedisStore({client:connectionRedis}),
+        store: new RedisStore({client:connectionRedis,ttl:60000}),
         secret:"sssss",
         resave:false,
         saveUninitialized:false,
         cookie:{
             httpOnly:true,
-            maxAge:
+            maxAge:60000
         }
     })
 )
