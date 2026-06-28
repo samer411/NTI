@@ -1,0 +1,24 @@
+version: "3.8"
+
+services:
+
+  mongo:
+    image: mongo
+    container_name: mongo
+    ports:
+      - "27017:27017"
+
+  redis:
+    image: redis
+    container_name: redis
+    ports:
+      - "6379:6379"
+
+  nodeapp:
+    build: .
+    container_name: nodeapp
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongo
+      - redis
